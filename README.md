@@ -2,7 +2,7 @@
 This repo is the official implementation for [Graph Contrastive Learning for Skeleton-based Action Recognition](https://arxiv.org/abs/2301.10900). The paper is accepted to ICLR2023.
 
 ## Architecture of SkeletonGCL
-![image](src/framework.jpg)
+![image](src/framework.png)
 # Prerequisites
 
 - Python >= 3.6
@@ -20,7 +20,6 @@ This repo is the official implementation for [Graph Contrastive Learning for Ske
 
 - NTU RGB+D 60 Skeleton
 - NTU RGB+D 120 Skeleton
-- NW-UCLA
 
 #### NTU RGB+D 60 and 120
 
@@ -61,8 +60,6 @@ Put downloaded data into the following directory structure:
  python seq_transformation.py
 ```
 
-
-
 # Training & Testing
 
 ### Training
@@ -70,7 +67,7 @@ Put downloaded data into the following directory structure:
 - Change the config file depending on what you want, and you can refer to the script folder for the more examples. Notably, please just use one GPU for training because we find that using mutiple GPUs would affect the performances.
 
 ```
-# Example: training SkeletonGCL with CtrGCN on NTU RGB+D 120 cross-subject with joint modality on GPU 0
+# Example: training SkeletonGCL with CTRGCN on NTU RGB+D 120 cross-subject with joint modality on GPU 0
 python main.py --config config/nturgbd120-cross-subject/ctr.yaml --work-dir work_dir/ntu120/csub/ctrgcn_joint --device 0
 ```
 ```
@@ -81,7 +78,7 @@ python main.py --config config/nturgbd120-cross-subject/agcn.yaml --work-dir wor
 - To train model on NTU RGB+D 60/120 with bone or motion modalities, setting `bone` or `vel` arguments in the config file `default.yaml` or in the command line.
 
 ```
-# Example: training SkeletonGCL with CtrGCN on NTU RGB+D 120 cross subject under bone modality
+# Example: training SkeletonGCL with CTRGCN on NTU RGB+D 120 cross subject under bone modality
 python main.py --config config/nturgbd120-cross-subject/ctr.yaml --train_feeder_args bone=True --test_feeder_args bone=True --work-dir work_dir/ntu120/csub/ctrgcn_bone --device 0
 ```
 
