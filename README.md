@@ -64,7 +64,7 @@ Put downloaded data into the following directory structure:
 
 ### Training
 
-- Change the config file depending on what you want, and you can refer to the script folder for the more examples. Notably, please just use one GPU for training because we find that using mutiple GPUs would affect the performances.
+- Change the config file depending on what you want, and you can refer to the [script folder](https://github.com/OliverHxh/SkeletonGCL/tree/main/script) for the more examples. Notably, please just use one GPU for training because we find that using mutiple GPUs would affect the performances.
 
 ```
 # Example: training SkeletonGCL with CTRGCN on NTU RGB+D 120 cross-subject with joint modality on GPU 0
