@@ -12,6 +12,9 @@ This repo is the official implementation for [Graph Contrastive Learning for Ske
 - We provide the dependency file of our experimental environment, you can install all dependencies by creating a new anaconda virtual environment and running `pip install -r requirements.txt `
 - Run `pip install -e torchlight` 
 
+# Implementation
+The graph contrastive learning is implemented in this [file](https://github.com/OliverHxh/SkeletonGCL/blob/main/model/loss.py).
+
 # Data Preparation
 
 ### Download datasets.
@@ -59,8 +62,6 @@ Put downloaded data into the following directory structure:
  # Transform the skeleton to the center of the first frame
  python seq_transformation.py
 ```
-# Key Implementation
-The key implementation is in this [file](https://github.com/OliverHxh/SkeletonGCL/blob/main/model/loss.py).
 
 # Training & Testing
 
