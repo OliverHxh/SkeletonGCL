@@ -1,4 +1,4 @@
-# CTR-GCN
+# SkeletonGCL
 This repo is the official implementation for [Graph Contrastive Learning for Skeleton-based Action Recognition](https://arxiv.org/abs/2301.10900). The paper is accepted to ICLR2023.
 
 ## Architecture of SkeletonGCL
