@@ -59,6 +59,8 @@ Put downloaded data into the following directory structure:
  # Transform the skeleton to the center of the first frame
  python seq_transformation.py
 ```
+# Key Implementation
+The key implementation is in this [file](https://github.com/OliverHxh/SkeletonGCL/blob/main/model/loss.py).
 
 # Training & Testing
 
