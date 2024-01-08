@@ -282,7 +282,10 @@ class Processor():
         self.loss = nn.CrossEntropyLoss().cuda(output_device)
         
         mem_size = self.data_loader['train'].dataset.__len__() if self.arg.phase == 'train' else 0
-        label_all = self.data_loader['train'].dataset.label if self.arg.phase == 'train' else []
+        if 'ucla' in self.arg.work_dir:
+            label_all = self.data_loader['train'].dataset.label * self.arg.train_feeder_args['repeat'] if self.arg.phase == 'train' else []
+        else:
+            label_all = self.data_loader['train'].dataset.label if self.arg.phase == 'train' else []
         self.graphContrast = InfoNCEGraph(in_channels=3*25*25, out_channels=256, class_num=self.arg.model_args["num_class"], \
             mem_size=mem_size, label_all=label_all, T=self.arg.temperature).cuda(output_device)
 
