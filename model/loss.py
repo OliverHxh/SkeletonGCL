@@ -18,7 +18,7 @@ class InfoNCEGraph(nn.Module):
         self.Bank = nn.Parameter(
             torch.zeros((mem_size, out_channels)), requires_grad=False
         )
-        self.label_all = torch.from_numpy(label_all)
+        self.label_all = torch.tensor(label_all)
         nn.init.normal_(self.trans.weight, 0, math.sqrt(2. / class_num))
         nn.init.zeros_(self.trans.bias)
         self.bank_flag = nn.Parameter(
